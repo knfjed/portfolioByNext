@@ -7,7 +7,7 @@ const About = () => (
     <Link href="/">
       <a>back to home</a>
     </Link>
-    <img src="/static/nextJs.svg" alt="Next.js" />
+    <img src="/static/nextJs.svg" alt="Next.js" width="200px" />
   </Layout>
 );
 

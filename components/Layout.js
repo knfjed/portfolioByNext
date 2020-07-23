@@ -1,8 +1,26 @@
 import React from "react";
 import Link from "next/link";
+import Head from "next/head";
+import Router from "next/router";
+import Nprogress from "nprogress";
+
+Router.onRouterChangeStart = (url) => {
+  console.log(url);
+  Nprogress.start();
+};
+
+Router.onRouteChangeComplete = () => Nprogress.done();
+Router.onRouteChangeError = () => Nprogress.done();
 
 export default ({ children, title }) => (
   <div>
+    <Head>
+      <title>kafu</title>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css"
+      />
+    </Head>
     <header>
       <Link href="/">
         <a>HOME</a>
